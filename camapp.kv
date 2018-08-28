@@ -1,0 +1,28 @@
+<CameraBoxLayout>:
+    orientation: 'vertical'
+    spacing: 10
+    padding: 10
+    Image:
+        id: imageCamera
+        source: 'mini.jpg'
+    Button:
+        id: buttonStart
+        text: 'Start'
+        on_press: root.startCamera(imageCamera, buttonStart, buttonStop, buttonCapture)
+        height: 50
+        size_hint_y: None
+        disabled: False
+    Button:
+        id: buttonStop
+        text: 'Stop'
+        on_press: root.stopCamera(imageCamera, buttonStart, buttonStop, buttonCapture)
+        height: 50
+        size_hint_y: None
+        disabled: True
+    Button:
+        id: buttonCapture
+        text: 'Screenshot'
+        on_press: root.takeScreenshot(imageCamera)
+        height: 50
+        size_hint_y: None
+        disabled: True
